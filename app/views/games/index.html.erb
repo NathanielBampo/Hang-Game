@@ -1,0 +1,11 @@
+<h1>Все игры</h1>
+
+<div>
+  <% @games.each_with_index do |game, index| %>
+    <p><%= index %>.<%= link_to "#{game.title}", game_path(game) %></p>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "Game new", new_game_path %>
+</div>

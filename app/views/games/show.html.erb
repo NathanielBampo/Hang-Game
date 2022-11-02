@@ -1,0 +1,10 @@
+<h1>Результат игры <%= @game.title %></h1>
+
+<%= @game.result %>
+
+<p>Вы выбрали: <b><%= @game.choice_user %></b></p>
+
+<p>Компик выбрал: <b><%= @game.choice_pk %></b></p>
+
+<p><%= link_to "Game new", new_game_path %></p>
+<p><%= link_to "Back", root_path %></p>

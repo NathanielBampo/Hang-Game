@@ -1,0 +1,10 @@
+<h1>Новая игра!</h1>
+
+<h2>Введите ваш выбор Пользователь-№ <%= rand(999) %></h2>
+
+<%= form_for @game do |f| %>
+  <%= f.label "Выбор пользователя" %>
+  <%= f.text_field :choice_user %>
+
+  <%= f.submit "Enter choice" %>
+<% end %>
