@@ -1,4 +1,6 @@
 class Game < ActiveRecord::Base
+  belongs_to :user
+  
   GAME_CHOICE = %w(камень ножницы бумага).freeze
 
   validates :choice_user, presence: true

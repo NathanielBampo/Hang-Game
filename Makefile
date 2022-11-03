@@ -7,6 +7,6 @@ dbm:
 	rake db:migrate
 
 # Guard run
-guard:
+g:
 	bundle exec guard
 	

@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_many :games
   VALID_EMAIL_REGEX = /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/
 
-  before_save :email_downcase
+  before_save { email.downcase! }
 
   validates :name, presence: true,
                    length: { minimum: 1, maximum: 50 }
@@ -12,8 +12,4 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
 
   has_secure_password
-
-  def email_downcase
-    self.email = email.downcase
-  end
 end
