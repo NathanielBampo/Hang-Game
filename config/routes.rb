@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root "games#index"
+  root 'all_games#home'
+
+  get 'description' => 'games#description'
 
   resources :games
   resources :users

@@ -1,10 +1,21 @@
 <h1>Новая игра!</h1>
 
-<h2>Введите ваш выбор Пользователь-№ <%= rand(999) %></h2>
+<h2>Ваш выбор Пользователь-№ <%= rand(999) %></h2>
 
-<%= form_for @game do |f| %>
-  <%= f.label "Выбор пользователя" %>
-  <%= f.text_field :choice_user %>
+<div class="list-games">
+  <%= form_for @game do |form| %>
+    <%= form.hidden_field :choice_user, value: "камень" %>
+    <%= form.submit "Камень", class: "submit-img-stone" %>
+  <% end %>
 
-  <%= f.submit "Enter choice" %>
-<% end %>
+  <%= form_for @game do |form| %>
+    <%= form.hidden_field :choice_user, value: "ножницы" %>
+    <%= form.submit "Ножницы", class: "submit-img-scissors" %>
+  <% end %>
+
+  <%= form_for @game do |form| %>
+    <%= form.hidden_field :choice_user, value: "бумага" %>
+    <%= form.submit "Бумага", class: "submit-img-paper" %>
+  <% end %>
+
+</div>

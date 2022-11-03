@@ -2,3 +2,35 @@
   width: 50px;
   height: 20px;
 }
+
+.size-image-choise {
+  width: 30px;
+  height: 30px;
+}
+
+.submit-img-stone {
+  margin: 0;
+  padding: 50px;
+  border: 0;
+  background: gray;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.submit-img-scissors {
+  margin: 0;
+  padding: 50px;
+  border: 0;
+  background: red;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.submit-img-paper {
+  margin: 0;
+  padding: 50px;
+  border: 0;
+  background: wheat;
+  cursor: pointer;
+  cursor: hand;
+}

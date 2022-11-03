@@ -4,6 +4,15 @@ html {
     margin: 0;
     padding: 0;
 
+
+    .container {
+      .jumbotron {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
     .wrapper {
       display: flex;
       flex-direction: column;
